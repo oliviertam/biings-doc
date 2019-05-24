@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biings Developers</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700,900|Roboto+Mono:100,300,400,500,700" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://www.biings.com/static/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="http://www.biings.com/static/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="http://www.biings.com/static/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="http://www.biings.com/static/images/favicons/safari-pinned-tab.svg" color="#888888">
+  <link rel="shortcut icon" href="http://www.biings.com/static/images/favicons/favicon.ico">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css">
+  <link rel="stylesheet" href="bds.css">
+  <link rel="stylesheet" href="docsify.css">
+</head>
+<body class="no-sidebar">
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+        name: '',
+        themeColor: '#7E6ADE',
+        coverpage: false,
+        loadNavbar: true,
+        loadSidebar: false,
+        notFoundPage: true,
+        executeScript: true,
+        markdown: {
+          xhtml: true
+        },
+        auto2top: true,
+        formatUpdated: '{YYYY}',
+        plugins: [
+          function (hook,vm) {
+            hook.beforeEach(function (html) {
+              return html + '<hr>'
+              +'<footer class="is-clearfix is-size-7 has-text-grey-dark"><div class="columns is-gapless">'
+              +'<div class="column is-5 is-hidden-mobile">© {docsify-updated} Biings. All rights reserved.</div>'
+              +'<div class="column is-2 has-text-centered"><a href="https://www.biings.com/"><svg class="icon has-fill-grey"><use xlink:href="media/bds-icons.min.svg#biings"></use></svg></a></div>'
+              +'<div class="column is-5 is-hidden-mobile has-text-right">'
+              +'<a href="https://www.biings.com/contact.html">Contact Us</a> &nbsp; &nbsp; '
+              +'<a href="http://status.biings.com/">Status</a> &nbsp; &nbsp; '
+              +'<a href="https://www.biings.com/legal.html">Legal</a>'
+              +'</div></div></footer>'
+            });
+          }
+      ]
+    };
+  </script>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if(currentScrollPos > 50)
+      {
+        document.getElementsByTagName("nav")[0].classList.add("shadowed");
+      }
+      else {
+        document.getElementsByTagName("nav")[0].classList.remove("shadowed");
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    function toggleTab(tabId)
+    {
+      document.getElementById('tab-1').classList.remove("is-active");
+      document.getElementById('tab-2').classList.remove("is-active");
+      document.getElementById('tab-3').classList.remove("is-active");
+      document.getElementById('box-1').classList.add("is-hidden");
+      document.getElementById('box-2').classList.add("is-hidden");
+      document.getElementById('box-3').classList.add("is-hidden");
+      document.getElementById('tab-'+tabId).classList.add("is-active");
+      document.getElementById('box-'+tabId).classList.remove("is-hidden");
+      
+    }
+    
+    </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
