@@ -49,54 +49,43 @@ blockquote
     top: 0;
     left: 0;
     margin: 0 !important;
-    padding: 1.75rem 2.5rem;
+    padding: 1.5rem 1rem 1.75rem;
     text-align: left;
-    background-color: #302D3D;
+    font-weight: 500;
     transition: padding 0.2s ease-out;
+    background-color: #46285d;
 }
 .app-nav.shadowed
 {
-    box-shadow: 0 2px 4px rgba(48, 45, 61, 0.4);
-    padding: 0.875rem 2.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.3);
+    padding: 1rem 2rem;
 }
-.app-nav > div
+.app-nav.shadowed hr
 {
-    margin: 0 auto;
-    padding: 0 0.5rem;
-    max-width: 1100px;
-    font-weight: 500;
+    display: none;
 }
 .docsify-logo > img
 {
-    float: left;
-    width: 150px;
-    height: 27px;
-    margin-right: 1.5rem;
+    vertical-align: middle;
+    width: 140px;
+    height: 26px;
+}
+.docsify-logo:not(:hover)
+{
+    opacity: 0.8;
+    transition: opacity .2s linear;
 }
 .app-nav a
 {
-    color: #8B85A0;
+    color: #af85ce;
     position: relative;
 }
 .app-nav a.active,
-.app-nav a:hover
+.app-nav a:hover:not(.button)
 {
     color: white;
     border: none;
-}
-.app-nav a.active:after {
-    position: absolute;
-    right: 35%;
-    bottom: -37px;
-    left: 35%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #9d8cdb;
-    content: "";
-}
-.app-nav.shadowed a.active:after {
-    display: none;
-}  
+} 
 
 aside,
 .sidebar-toggle
@@ -117,13 +106,12 @@ footer > div
 }
 footer svg
 {
-    width: 2.5em !important;
-    height: 2.5em;
+    width: 1.875em !important;
+    height: 1.875em !important;
 }
 footer svg:hover
 {
-    opacity: 0.8;
-    transition: opacity .1s linear;
+    opacity: 0.9;
 }
 section.content
 {
@@ -138,9 +126,7 @@ section.content
 }
 .wrapper
 {
-    max-width: 1100px;
-    padding: 9.5rem 1.5rem 4rem;
-    margin: 0 auto;
+    padding: 9rem 1rem 9rem;
 }
 
 .markdown-section > *

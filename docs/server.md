@@ -1,23 +1,21 @@
-<div class="wrapper">
+<div class="container wrapper has-text-centered">
 
-<h1 class="title is-2 is-serif">Host Biings on your server</h1>
+<h1 class="title is-2 is-spaced">Host Biings on your server</h1>
+<p class="subtitle is-5 has-text-centered has-text-grey-darker">
+    You can host your own instance of Biings on your server and get unlimited integration possibilities while retaining the same Biings experience.
+    Server requirements below.
+</p>
 
-You can host your own instance of Biings on your server and get unlimited integration possibilities while retaining the same Biings experience.
-All features are available in both Cloud and On-premises distributions.
-<br><br>
+<hr>
 
-The following requirements should be met for Biings to run properly on your environment:
-
-<br><br>
-
-<div class="tabs is-boxed is-marginless">
+<div class="tabs is-boxed is-marginless is-centered">
     <ul class="is-borderless">
         <li class="is-active" onclick="toggleTab(1)" id="tab-1"><a>Server or Virtual machine</a></li>
         <li id="tab-2" onclick="toggleTab(2)"><a>Ports opening</a></li>
         <li id="tab-3" onclick="toggleTab(3)"><a>Browser support</a></li>
     </ul>
 </div>
-<div id="box-1" class="box is-raised is-large">
+<div id="box-1" class="box is-large is-floating">
 
 | Minimum requirements | |
 |:-|-|
@@ -29,7 +27,7 @@ The following requirements should be met for Biings to run properly on your envi
 | Web Server | **Nginx** or **Apache** |
 
 </div>
-<div id="box-2" class="box is-raised is-large is-hidden">
+<div id="box-2" class="box is-large is-floating is-hidden">
 
 To allow Biings to communicate with its users, external services (e.g. insurance) and our maintenance team, the following ports must be available / open :<br><br>
 
@@ -49,7 +47,7 @@ Biings occasionnaly makes requests to the following third-party internet service
 </p>
 
 </div>
-<div id="box-3" class="box is-raised is-large is-hidden">
+<div id="box-3" class="box is-large is-floating is-hidden">
 
 When connecting to Biings from the Web, please make sure you are using one of these supported browsers, with Javascript enabled. For a smooth experience, please make sure your browser and operating system is up to date.
 

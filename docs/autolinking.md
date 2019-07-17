@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="container wrapper">
 <h1 class="title is-3 is-serif">Absence linking rules</h1>
 
 The absence linking algorithm runs every time Biings synchronises with an absence data source. The different cases where absences are consolidated (merged) or linked together are described below.

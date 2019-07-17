@@ -1,35 +1,38 @@
 
-<div class="has-background-black-bis has-text-centered">
+<div class="has-background-dark has-text-centered">
+<hr>
 <br>
-<hr class="is-visible is-large" style="border-color: transparent; background-color: rgba(0,0,0,0.25); max-width: 1080px; margin-top: 4.5rem; margin-left: auto; margin-right: auto;">
-<h1 class="title is-2 is-serif has-text-white">Biings Developer Guide</h1>
-<div class="subtitle has-text-centered is-4 has-text-white-ter" style="margin-top: -0.75rem;">New meanings for your HR data.</div>
+<div class="container">
+    <hr class="is-visible is-thin" style="border-color: rgba(0,0,0,0.15);">
+</div>
+<hr class="is-small">
+<p class="title is-2 is-family-secondary has-text-weight-medium has-text-white">Biings Developer Guide</p>
+<p class="subtitle has-text-centered is-4 has-text-primary-lighter">New meanings for your HR data.</p>
 <hr class="is-large">
 </div>
 
-<div class="wrapper" style="padding-top: 0;">
+<div class="container" style="padding-top: 0;">
 
 <div class="columns is-centered">
     <div class="column is-10">
 
-<div href="#/integration" class="box is-large is-popping has-background-gradient-1">
+<div href="#/integration" class="box is-large has-background-white is-white is-bordered">
     <div class="level">
     <div class="level-left">
         <div class="level-item"><img src="media/devdoc.png" width="65" class="no-zoom" style="margin-right: 1.25rem;"/></div>
         <div class="level-item">
             <div>
-                <div class="title is-spaced is-3 has-text-white has-text-weight-medium">Integration Doc</div>
-                <div class="subtitle is-6 has-text-light">Integrate and synchronise your app with Biings</div>
+                <p class="title is-spaced is-3 has-text-weight-medium">Integration Doc</p>
+                <div class="subtitle is-6 has-text-grey-dark">Integrate and synchronise your app with Biings</div>
             </div>
         </div>
         </div>
         <div class="level-right">
-                <a href="#/integration" class="button is-rounded is-outlined is-white is-beefy">Get started</a>
+                <a href="#/integration" class="button is-rounded is-glowing is-dark is-beefy">Get started</a>
         </div>
     </div>
 </div>
-
-<div class="box is-large is-white is-raised">
+<div class="box is-large is-white is-bordered">
     <div class="level">
         <div class="level-left">
             <div>
@@ -46,10 +49,12 @@
 </div>
 </div>
 
-<hr class="is-visible" style="width: 250px; margin: 3rem auto;">
+<hr class="is-large">
 
-<h2 class="title is-3 has-text-centered has-text-grey-dark has-text-weight-normal">Enable sustainable HR habits</h2>
-<hr>
+<h2 class="title is-3 has-text-centered is-family-secondary has-text-weight-medium has-text-dark">Enable <span class="has-text-primary">sustainable</span> HR habits</h2>
+
+<hr class="is-large">
+
 <div class="columns is-multiline is-centered">
     <div class="column is-5"><img src="media/workflows.png" class="no-zoom"/></div>
     <div class="column is-5">
@@ -60,7 +65,7 @@
             <span class="is-size-7 has-text-weight-medium">Learn about <a href="#/integration?id=relations">Occupations</a></span>
         </div>
     </div>
-    <div class="column is-12"></div>
+    <div class="column is-12"><br></div>
     <div class="column is-5">
         <div class="box">
             <div class="title is-4">Automate claim reports</div>
@@ -70,7 +75,7 @@
         </div>
     </div>
     <div class="column is-5"><img src="media/claimdetail.png" class="no-zoom"/></div>
-    <div class="column is-12"></div>
+    <div class="column is-12"><br></div>
     <div class="column is-5"><div class="box is-white has-text-centered is-bordered"><img src="media/absencelink.png" width="200" class="no-zoom"/></div></div>
     <div class="column is-5">
         <div class="box">

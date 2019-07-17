@@ -1,23 +1,26 @@
-<div>
-
-<div class="level has-text-white">
-    <div class="level-left">
-        <div class="level-item"><a href="/#/" class="docsify-logo"><img src="/media/biings-dev.png" data-origin="media/biings-dev.png" alt="Biings Developers"></a></div>
-        <div class="level-item is-hidden-mobile">
+<div class="container">
+<div class="columns is-gapless is-marginless">
+    <div class="column is-4 is-full-mobile has-text-centered-mobile">
+        <a href="/#/" class="docsify-logo"><img src="/media/biings-dev.svg" data-origin="media/biings-dev.svg" alt="Biings Developers"></a>
+    </div>
+    <div class="column is-12 is-hidden-tablet"><br></div>
+    <div class="column is-4 is-full-mobile">
+        <div class="level is-mobile has-text-white">
+        <div class="level-item ">
 
 - [Integration](integration)
     </div>
-    <div class="level-item is-hidden-mobile">
+    <div class="level-item">
 
 - [On-premises](server)
     </div>
-    <div class="level-item is-hidden-mobile">
+    <div class="level-item">
 
 - [Apps](apps)
+</div>
+</div>
+
     </div>
-    </div>
-    <div class="level-right is-hidden-mobile">
-    <div class="level-item"><a href="https://www.biings.com/contact.html" class="button is-rounded is-primary is-small">Get help</a></div>
-    </div>
+    <div class="column is-4 is-hidden-mobile"><a href="https://www.biings.com/contact.html" class="button is-rounded is-primary is-small is-pulled-right">Get help</a></div>
 </div>
 </div>

@@ -1,6 +1,6 @@
-<div class="wrapper">
+<div class="container wrapper">
 <div class="columns is-multiline">
-<div class="column is-2 is-hidden-mobile is-sticky is-hidden-print">
+<div class="column is-2 is-hidden-touch is-sticky is-hidden-print">
 <div class="menu is-size-7">
     <ul class="menu-list"><li>
    
