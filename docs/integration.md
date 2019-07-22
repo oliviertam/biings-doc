@@ -59,7 +59,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | <h3 class="title is-5">Data set</h3> || Required to enable: |
 |-|-|-|
-| [Persons](#persons ":target=_self")<br><img width="650" height="1"/> | All persons/employees in your organisation with their personal details. This set should also include previous employees. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span><br><img width="850" height="1"/> |
+| [Persons](#persons ":target=_self")<br> | All persons/employees in your organisation with their personal details. This set should also include previous employees. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span><br> |
 | [ Assignements](#assignments ":target=_self") | Employees' job assignements. An assignement defines a moment in time (start and end) where the Person has worked in your organisation, where (in which Org Unit) and at what percentage (rate). A person can have more than one assignements at the same time provided that the total contract rate does not exceed 100%. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span> |
 | [ Org Units](#ou ":target=_self") | All current Organisational Units (departments, services, teams, etc). This set is used to represent the organisational structure of your company. An Org Unit can be of any size or importance, either an entire department or a small team, it depends on the level of granularity you need. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span> |
 | [ Occupations](#relations ":target=_self") | All persons with specific occupations or management roles related to an Org. Unit. This set is used to describe the type of relation existing between employees, managers, HRBP, chiefs, etc.  | <span class="tag is-info" style="background-color: #71C7D6;">Care</span> |
@@ -99,7 +99,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | Column | Description | Type | Format |
 |-|-|-|-|
-| `id` * | Unique person identifier<br><span class="has-text-orange">If `id` is empty "persons" will be ignored</span> | Int/String | <img width="250"/> |
+| `id` * | Unique person identifier<br><span class="has-text-orange">If `id` is empty "persons" will be ignored</span> | Int/String | |
 | `lastname` * | Person's last name<br><span class="has-text-orange">If `lastname` is empty "persons" will be ignored</span>  | String ||
 | `firstname` * | Person's first name<br><span class="has-text-orange">If `firstname` is empty "persons" will be ignored</span>  | String ||
 | `gender` * | Gender of the person<br><span class="has-text-orange">If `gender` is empty or different than male or female "persons" will be ignored.`| String | `M` or `F` |
@@ -143,7 +143,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | Column | Description | Type | Format |
 |-|-|-|-|
-| `id` *<br><img width="70"/> | Unique Assignment identifier – recommended if available. Biings otherwise generates an Id for each unique combination of `person_id` – `start_date` – `ou_id`<br><span class="has-text-orange">If `id` is empty "Assignements" will be ignored</span>  | Int/String<br><img width="400"/> | <img width="500"/> |
+| `id` * | Unique Assignment identifier – recommended if available. Biings otherwise generates an Id for each unique combination of `person_id` – `start_date` – `ou_id`<br><span class="has-text-orange">If `id` is empty "Assignements" will be ignored</span>  | Int/String | |
 | `person_id` * | Unique person identifier<br><span class="has-text-orange">If `person_id` is empty "Assignements" will be ignored</span>  | Int/String | |
 | `ou_id` * | Org. unit identifier, matching with an `id` in the Organisational Units data set<br><span class="has-text-orange">If `ou_id` is empty "Assignements" will be ignored</span> | Any | |
 | `start_date` * | Assignment start date<br><span class="has-text-orange">`start_date` must be lower than end_date or "Assignements" will be ignored</span> | String | YYYY-MM-DD |
@@ -189,7 +189,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | Column | Description | Type | Format |
 |-|-|-|-|
-| `person_id` *<br><img width="180"/> | Person ID, matching with a `person_id` in the Person data set<br><span class="has-text-orange">If `person_id` is empty "Occupations" will be ignored</span> | Int/String | <img width="200"/> |
+| `person_id` * | Person ID, matching with a `person_id` in the Person data set<br><span class="has-text-orange">If `person_id` is empty "Occupations" will be ignored</span> | Int/String | |
 | `to_person_id` * | The Person ID towards who the relation is<br><span class="has-text-orange">If `to_person_id` is empty "Occupations" will be ignored</span> | Int/String | |
 | `kind` * | Kind of relation<br><span class="has-text-orange">If `kind` is empty "Occupations" will be ignored</span> | Int | `1`= *Substitute manager*<br>`2`= *Manager*<br>`4`= *RH* |
 
@@ -205,7 +205,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | Column | Description | Type | Format |
 |:-|:-|:-:|:-|
-| `id` *<br><img width="300"/> | Unique absence identifier<br>_Can be omitted for a single data import_<br><span class="has-text-orange">If `id` is empty "Absences" will be ignored</span> | Int/String<br><img width="300"/> | <img width="400"/> |
+| `id` * | Unique absence identifier<br>_Can be omitted for a single data import_<br><span class="has-text-orange">If `id` is empty "Absences" will be ignored</span> | Int/String | |
 | `person_id` * | Absent identifier, matching with `person_id` in the collaborator data set<br><span class="has-text-orange">If `person_id` is empty "Absences" will be ignored</span>  | | |
 | `case_id` | Case identifier, grouping multiple absence together | Int ||
 | `from` * | Date at which the work incapacity started<br>Time values are optional.<br><span class="has-text-orange">`from` mustn't be empty or upper than end_date, in that case "Absences" will be ignored</span> | String | YYYY-MM-DD<br>hh:mm |
