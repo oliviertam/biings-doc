@@ -203,6 +203,8 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 <span class="is-size-7">
 
+?> Biings applies [automatic linking rules](autolinking) when syncing with external absence database.
+
 | Column | Description | Type | Format |
 |:-|:-|:-:|:-|
 | `id` * | Unique absence identifier<br>_Can be omitted for a single data import_<br><span class="has-text-orange">If `id` is empty "Absences" will be ignored</span> | Int/String | |
