@@ -3,10 +3,10 @@
 <div class="column is-2 is-hidden-touch is-sticky is-hidden-print">
 <div class="menu is-size-7">
     <ul class="menu-list"><li>
-   
+    
 [Get started](integration)
 </li><li>
-   
+    
 [File integration](integration#csv)
 </li>
 
@@ -21,6 +21,9 @@
 </li><li>
 
 [Assignments](integration#assignments)
+</li><li>
+
+[Salaries](integration#salaries)
 </li><li>
     
 [Org Units](integration#ou)
@@ -61,6 +64,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 |-|-|-|
 | [Persons](#persons ":target=_self")<br> | All persons/employees in your organisation with their personal details. This set should also include previous employees. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span><br> |
 | [ Assignements](#assignments ":target=_self") | Employees' job assignements. An assignement defines a moment in time (start and end) where the Person has worked in your organisation, where (in which Org Unit) and at what percentage (rate). A person can have more than one assignements at the same time provided that the total contract rate does not exceed 100%. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span> |
+| [ Salaries](#salaries ":target=_self") | Employees' salaries. A Salary defines a month salary for a given period of time. | <span class="tag is-info" style="background-color: #F89465;">Claim</span> |
 | [ Org Units](#ou ":target=_self") | All current Organisational Units (departments, services, teams, etc). This set is used to represent the organisational structure of your company. An Org Unit can be of any size or importance, either an entire department or a small team, it depends on the level of granularity you need. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> <span class="tag is-info" style="background-color: #F89465;">Claim</span> |
 | [ Occupations](#relations ":target=_self") | All persons with specific occupations or management roles related to an Org. Unit. This set is used to describe the type of relation existing between employees, managers, HRBP, chiefs, etc.  | <span class="tag is-info" style="background-color: #71C7D6;">Care</span> |
 | [ Absences](#absences ":target=_self") | Employees' absences, including planned absences such as holidays and maternity leave. An absence is defined as a period of incapacity to work wether it is planned or unplanned. This set should include all absence history. | <span class="tag is-info" style="background-color: #A05CB7;">Pilot</span> <span class="tag is-info" style="background-color: #71C7D6;">Care</span> | |
@@ -159,6 +163,27 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 </span>
 
+<a id="salaries"></a>
+</div>
+
+<div  class="column is-2 is-hidden-print"></div>
+<div class="column is-10 box is-white is-large">
+    <h3 class="title is-4 has-text-weight-semibold">Salaries</h2>
+
+<span class="is-size-7">
+
+| Column | Description | Type | Format |
+|-|-|-|-|
+| `person_id` * | Person ID, matching with a `person_id` in the Person data set.| Int | <img width="200"/> |
+| `code` * | Type of salary or type of benefits. | Int | In order to optimally pre-fill the claim reports, the following data should be extracted:<br>`code 100:` basic salary (gross salary)<br>`code 200:` childs and family benefits<br>`code 300:` free (bonus, 13th salary,...)<br>`code 400:` vacation and public holiday compensation<br>`code 500:` other supplements<br><br>If the salaries for LAA, LAAC and illness claim reports are different, it's possible to send the three:<br>`code 101:` basic salary (gross salary) LAA<br>`code 102:` basic salary (gross salary) LAAC<br>`code 103:` basic salary (gross salary) PGM|
+| `amount` * | Amount of salary. | Float | |
+| `periodicity` * | Period covered by the salary. | Int | `1:` hourly - `2:` daily - `3:` monthly - `4:` annually - `5:` one time |
+| `currency` | Currency used for the salary. | Char(3) | |
+| `valid_from` * | Date at which the salary validity will start. | Date | |
+| `valid_until` * | Date at which the salary validity finish. | Date | |
+
+</span>
+
 <a id="ou"></a>
 </div>
 
@@ -221,5 +246,6 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 </span>
 </div>
+
 </div>
 </div>

@@ -21,6 +21,6 @@
 </div>
 
     </div>
-    <div class="column is-4 is-hidden-mobile"><a href="https://www.biings.com/contact.html" class="button is-rounded is-primary is-small is-pulled-right">Get help</a></div>
+    <div class="column is-4 is-hidden-mobile"><a href="https://biings.com/contact" class="button is-rounded is-primary is-small is-pulled-right">Get help</a></div>
 </div>
 </div>

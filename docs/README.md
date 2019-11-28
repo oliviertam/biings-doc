@@ -122,5 +122,5 @@ Learn about [absence linking rules](autolinking)
 <hr>
 
 <div class="title is-5 has-text-centered has-text-grey-darker">Have a question?</div>
-<div class="subtitle has-text-centered is-6">Don't hestitate to <a href="tel:0041263215246">Call</a> or <a href="https://www.biings.com/contact.html">Contact Us</a></div>
+<div class="subtitle has-text-centered is-6">Don't hestitate to <a href="tel:0041263215246">Call</a> or <a href="https://biings.com/contact">Contact Us</a></div>
 </div>

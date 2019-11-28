@@ -1,0 +1,29 @@
+{
+    "name": "biings-doc",
+    "description": "Biings Developer Documentation",
+    "scripts": {
+        "dev": "docsify serve docs"
+    },
+    "files": [
+        "docs/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Biings/biings-doc"
+    },
+    "keywords": [
+        "biings",
+        "design system",
+        "icons"
+    ],
+    "author": {
+        "name": "Biings Technologies SA",
+        "email": "info@biings.com",
+        "url": "https://www.biings.com"
+    },
+    "homepage": "https://developer.biings.com",
+    "browserslist": [
+        "defaults",
+        "not ie <= 8"
+    ]
+}
