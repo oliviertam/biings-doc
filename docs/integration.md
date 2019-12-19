@@ -216,10 +216,26 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 <span class="is-size-7">
 
+?> Occupations can be described either between 2 Persons, or from a Person towards a Org. Unit.
+
+<br>
+
+<h4 class="title is-5">Person to Person:</h4>
+
 | Column Name | Description | Type | Format |
 |-|-|-|-|
 | `person_id` * | Person ID, matching with a `person_id` in the Person data set<br><span class="has-text-orange">If `person_id` is empty "Occupations" will be ignored</span> | Int/String | |
 | `to_person_id` * | The Person ID towards who the relation is<br><span class="has-text-orange">If `to_person_id` is empty "Occupations" will be ignored</span> | Int/String | |
+| `kind` * | Kind of relation<br><span class="has-text-orange">If `kind` is empty "Occupations" will be ignored</span> | Int | `1`= Substitute manager<br>`2`= Manager<br>`4`= RH |
+
+<br>
+
+<h4 class="title is-5">Person to Org Unit:</h4>
+
+| Column Name | Description | Type | Format |
+|-|-|-|-|
+| `person_id` * | Person ID, matching with a `person_id` in the Person data set<br><span class="has-text-orange">If `person_id` is empty "Occupations" will be ignored</span> | Int/String | |
+| `ou_id` * | The Org Unit ID towards the relation is. All Persons within that Org Unit will be part of the relation. <br><span class="has-text-orange">If `ou_id` is empty "Occupations" will be ignored</span> | Int/String | |
 | `kind` * | Kind of relation<br><span class="has-text-orange">If `kind` is empty "Occupations" will be ignored</span> | Int | `1`= Substitute manager<br>`2`= Manager<br>`4`= RH |
 
 </span>

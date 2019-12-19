@@ -50,7 +50,7 @@
         </a>
     </div>
     <div class="tile is-3 is-parent">
-        <a href="http://www.protime.eu" class="box is-bordered is-link" target="blank">
+        <a href="https://fr.polypoint.ch/content/planification-des-horaires" class="box is-bordered is-link" target="blank">
             <img src="media/logo_polypoint.png" alt="polypoint" width="45%" style="margin-top: 6px;" /><hr class="is-smaller">
             <div class="title is-6">Polypoint PEP</div>
             <div class="subtitle is-size-7 has-text-grey-dark">Éditeur de timbrage actif avec ou sans connexion via des terminaux de timbrage.</div>

@@ -2,7 +2,7 @@
     "name": "biings-doc",
     "description": "Biings Developer Documentation",
     "scripts": {
-        "dev": "docsify serve docs"
+        "dev": "docsify serve docs --port 3002"
     },
     "files": [
         "docs/*"
