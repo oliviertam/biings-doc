@@ -13,7 +13,7 @@
 <li>
 
 </ul>
-<hr class="is-smaller">
+<hr class="is-thin is-wavy">
 <p class="menu-label">Data sets:</p>
 <ul class="menu-list"><li>
 
@@ -39,7 +39,7 @@
     </div>
 <div class="column is-10">
 
-<h1 class="title is-1 is-family-secondary">Integrate your app with Biings</h1>
+<h1 class="title is-1 is-family-secondary has-text-weight-bold">Integrate your app with Biings</h1>
 
 <br>
 
@@ -50,7 +50,7 @@
 <br>Before you start, [check here](apps) if the software from which your data will be exported from has a ready-made integration with Biings.
 
 <a id="csv"></a>
-<hr class="is-visible is-large">
+<hr class="is-visible is-size-3">
 
 <h1 class="title is-2">CSV file integration</h1>
 

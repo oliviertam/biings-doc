@@ -5,10 +5,10 @@
 <div class="container">
     <hr class="is-visible is-thin" style="border-color: rgba(0,0,0,0.15);">
 </div>
-<hr class="is-small">
-<p class="title is-2 is-family-secondary has-text-weight-medium has-text-white">Biings Developer Guide</p>
-<p class="subtitle has-text-centered is-4 has-text-primary-lighter">New meanings for your HR data.</p>
-<hr class="is-large">
+<br>
+<p class="title is-1 is-family-secondary has-text-weight-bolder has-text-white">Biings Developer Guide</p>
+<p class="subtitle has-text-centered has-text-primary-lighter">Integrate Biings with the softwares already deployed in your company.</p>
+<hr class="is-size-4">
 </div>
 
 <div class="container" style="padding-top: 0;">
@@ -16,7 +16,7 @@
 <div class="columns is-centered">
     <div class="column is-10">
 
-<div href="#/integration" class="box is-large has-background-white is-white is-bordered">
+<div href="#/integration" class="box is-large has-background-white is-white is-raised">
     <div class="level">
     <div class="level-left">
         <div class="level-item"><img src="media/devdoc.png" width="65" class="no-zoom" style="margin-right: 1.25rem;"/></div>
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-<div class="box is-large is-white is-bordered">
+<div class="box is-large is-white is-raised">
     <div class="level">
         <div class="level-left">
             <div>
