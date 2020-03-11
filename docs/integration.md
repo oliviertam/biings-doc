@@ -20,13 +20,13 @@
 [Persons](integration#persons)
 </li><li>
 
+[Org Units](integration#ou)
+</li><li>
+
 [Assignments](integration#assignments)
 </li><li>
 
 [Salaries](integration#salaries)
-</li><li>
-    
-[Org Units](integration#ou)
 </li><li>
 
 [Occupations](integration#relations)
@@ -107,13 +107,12 @@ Biings uses CSV files to import data from another software or database. Dependin
 | `lastname` * | Person's last name<br><span class="has-text-orange">If `lastname` is empty "persons" will be ignored</span>  | String ||
 | `firstname` * | Person's first name<br><span class="has-text-orange">If `firstname` is empty "persons" will be ignored</span>  | String ||
 | `gender` * | Gender of the person<br><span class="has-text-orange">If `gender` is empty or different than male or female "persons" will be ignored.`| String | `M` or `F` |
-| `email` | Professional email address<br><span class="has-text-orange">If `email` is empty "persons" will be ignored</span>| String | abc@xyz.ch |
+| `email` * | Professional email address<br><span class="has-text-orange">If `email` is empty "persons" will be ignored</span>| String | abc@xyz.ch |
 | `sso_account` | SSO account username | String | mdupont |
-| `vacation_days` | Number of days of vacation per year, when employed at 100% | Int ||
-| `phone_pro` | Professional phone number<br><span class="has-text-orange">If `phone_pro` has more than 15 characters "persons" will be ignored</span> | String | max 15 characters |
-| `phone_private` | Private phone number | String | max 15 characters |
-| `mobile_pro` | Professional mobile number<br><span class="has-text-orange">If `mobile_pro` has more than 15 characters "persons" will be ignored</span> | String | max 15 characters |
-| `mobile_private` | Private mobile number<br><span class="has-text-orange">If `mobile_private` has more than 15 characters "persons" will be ignored</span> | String | max 15 characters |
+| `phone_pro` | Professional phone number<br><span class="has-text-orange">If `phone_pro` has more than 15 characters "persons" will be ignored</span> | String | max 100 characters |
+| `phone_private` | Private phone number | String | max 100 characters |
+| `mobile_pro` | Professional mobile number<br><span class="has-text-orange">If `mobile_pro` has more than 15 characters "persons" will be ignored</span> | String | max 100 characters |
+| `mobile_private` | Private mobile number<br><span class="has-text-orange">If `mobile_private` has more than 15 characters "persons" will be ignored</span> | String | max 100 characters |
 | `address_type` | Address type | Int | `2`= Home<br>`4`= Office |
 | `address_note` | Note or complement to the address | String ||
 | `address_line1` | Address line 1 | String ||
@@ -123,8 +122,8 @@ Biings uses CSV files to import data from another software or database. Dependin
 | `address_city` | City of residence | String ||
 | `address_country` | Country code | String | ISO 3166-1 alpha-2 or alpha-3 |
 | `avs_number` | Swiss AVS number | String ||
-| `birthdate` | Date of birth | Int | YYYY-MM-DD |
-| `start_working_date` | Date of work beginning | Int | YYYY-MM-DD |
+| `birthdate` | Date of birth | Date | YYYY-MM-DD |
+| `start_working_date` | Date of work beginning | Date | YYYY-MM-DD |
 | `marital_status` | Current marital status | Int | `1`= Single<br>`2`= Married<br>`3`= Divorced<br>`4`= Widow<br>`5`= Separated<br>`6`= Registered partnership<br>`7`= Dissolved partnership<br>`9`= Unknown_ |
 | `nb_children` | Number of dependent children | Int ||
 | `language` | Communication language | String | ISO 639-1 |
@@ -153,6 +152,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 | `start_date` * | Assignment start date<br><span class="has-text-orange">`start_date` must be lower than end_date or "Assignements" will be ignored</span> | String | YYYY-MM-DD |
 | `end_date` *| Assignment end date<br><span class="has-text-orange">`end_date` must be greater than start_date or "Assignements" will be ignored</span>  | String, Empty or Null | YYYY-MM-DD |
 | `rate` * | Rate of assignment for his/her job or particular position<br><span class="has-text-orange">`rate` must be greater than 0.01 or smaller than 1 or "Assignements" will be ignored</span> | Float | 0.0 — 1.0 |
+| `vacation_days` | Number of days of vacation per year, when employed at 100% | numeric 4,2 | 10, 10.5, 10.56 |
 | `contract_rate` | Main employment/contract rate.<br>In most situations, a person is hired to fill one position. In that case the contract_rate and assignment have the same rate. When an employee fills more than one position (aka assignments), the sum of all assignment rates equals the overall contract rate<br><span class="has-text-orange">`contract_rate` must be greater than 0.01 or smaller than 1 or "Assignements" will be ignored</span> | Float | 0.0 — 1.0 |
 | `job_id` * | Unique job/position identifier<br><span class="has-text-orange">If `job_id` is empty "Assignements" will be ignored</span> | Int | |
 | `job_function` | Job/position function or profession | String | Project manager, Nurse,..  |
@@ -184,7 +184,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 | `period` * | Period at which the salary is paid. | Int | `1` = hourly<br>`2` = daily<br>`3` = monthly<br>`4` = yearly<br>`5` = one time |
 | `start_date`* | Date at which the salary starts to be effective. | Date | |
 | `end_date`* | Date at which the salary stops being effective. | Date | |
-| `currency` | Currency used for the salary. | Char(3) | |
+| `currency` | Currency used for the salary. | ISO 4217 | |
 
 </span>
 
