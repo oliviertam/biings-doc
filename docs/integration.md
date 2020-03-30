@@ -178,6 +178,7 @@ Biings uses CSV files to import data from another software or database. Dependin
 
 | Column Name | Description | Type | Format |
 |-|-|-|-|
+| `id` * | Unique Salary record identifier. If an ID cannot be provided, Biings will generate an Id based on the `person_id`, `amount` and `start/end_date`. | Int/String |  |
 | `person_id` * | Person ID, matching with a `person_id` in the Person data set.| Int | <img width="200"/> |
 | `code` * | Type of salary or type of benefits. | Int | `100` = basic salary (gross salary)<br>`200` = childs and family benefits<br>`300` = free (bonus, 13th salary,...)<br>`400` = vacation and public holiday compensation<br>`500` = other supplements<br>`101` = basic salary (gross salary) for LAA<br>`102` = basic salary (gross salary) for LAAC<br>`103` = basic salary (gross salary) for PGM |
 | `amount` * | Salary amount | Float | |
