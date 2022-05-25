@@ -23,7 +23,7 @@
 | Processor | **Dual-Core 2GHz** |
 | RAM | **8 Gb** or 4 Gb for small organisations |
 | Disk space | **30 Gb** (OS excluded) |
-| Database | **PostgreSQL** 8.5 or higher, **Microsoft SQL Server** |
+| Database | **PostgreSQL** 11 or higher, **Microsoft SQL Server** |
 | Web Server | **Nginx** or **Apache** |
 
 </div>
@@ -55,8 +55,8 @@ When connecting to Biings from the Web, please make sure you are using one of th
 
 | | <img src="/media/browser_chrome.png" class="image is-64x64">Chrome | <img src="/media/browser_firefox.png" class="image is-64x64">Firefox | <img src="/media/browser_safari.png" class="image is-64x64">Safari | <img src="/media/browser_ie.png" class="image is-64x64">IE | <img src="/media/browser_opera.png" class="image is-64x64">Opera |
 |-:|:-:|:-:|:-:|:-:|:-:|
-| **Optimal** | **31+** | **28+** | **5.1** / **iOS 6+** | **11+** | **20+** |
-| Minimum | 14 | 5 | 4 / iOS 5 | 10 | 11 |
+| **Optimal** | **99** | **98** | **15 **/ **iOS15** | **Edge** | **83** |
+| Minimum | 93+ | 88+ | 11.1 / iOS12 | Edge | 72+ |
 
 </div>
 
